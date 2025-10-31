@@ -1,0 +1,37 @@
+[
+  {
+    "password": "pass123",
+    "length": 7,
+    "used_classes": [
+      "lower",
+      "digits"
+    ],
+    "charset_size_estimate": 36,
+    "entropy_bits": 36.19,
+    "classification": "medium",
+    "heuristics": {
+      "is_all_lower": true,
+      "is_all_upper": false,
+      "is_all_digits": false,
+      "has_repeated_char": false,
+      "is_sequential_inc": false,
+      "looks_like_year": false
+    },
+    "dictionary_attack": {
+      "attempted": true,
+      "found": false,
+      "checks": 2339,
+      "match": ""
+    },
+    "brute_force_simulation": {
+      "attempted": true,
+      "found": false,
+      "attempts": 10001,
+      "match": ""
+    },
+    "recommendations": [
+      "Mix lowercase and uppercase letters.",
+      "Add symbols or punctuation characters."
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "password": "Correct-Horse-Battery-Staple",
+    "length": 28,
+    "used_classes": [
+      "lower",
+      "upper",
+      "symbols"
+    ],
+    "charset_size_estimate": 84,
+    "entropy_bits": 178.98,
+    "classification": "strong",
+    "heuristics": {
+      "is_all_lower": false,
+      "is_all_upper": false,
+      "is_all_digits": false,
+      "has_repeated_char": true,
+      "is_sequential_inc": false,
+      "looks_like_year": false
+    },
+    "dictionary_attack": {
+      "attempted": false,
+      "found": false,
+      "checks": 0,
+      "match": ""
+    },
+    "brute_force_simulation": {
+      "attempted": true,
+      "found": false,
+      "attempts": 10001,
+      "match": ""
+    },
+    "recommendations": [
+      "Add digits (0-9)."
+    ]
+  }
+]

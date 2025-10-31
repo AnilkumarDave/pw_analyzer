@@ -1,0 +1,6 @@
+password,length,charset_size_estimate,entropy_bits,classification,dictionary_attack_found,dictionary_attack_checks,brute_force_found,brute_force_attempts,recommendations
+﻿P@ssw0rd123,12,94,78.66,strong,False,2339,False,10001,No immediate actionable suggestions â€” maintain unique passwords and use a password manager.
+password,8,26,37.6,medium,False,2339,False,10001,Mix lowercase and uppercase letters.; Add digits (0-9).; Add symbols or punctuation characters.
+12345678,8,10,26.58,weak,True,320,False,10001,"Increase length. Aim for 12+ characters.; Mix lowercase and uppercase letters.; Add symbols or punctuation characters.; Avoid using only digits (e.g., phone numbers or years).; This password is present or easily derived from common words â€” choose a unique passphrase or add complexity."
+Qwerty!1,8,94,52.44,strong,False,2339,False,10001,No immediate actionable suggestions â€” maintain unique passwords and use a password manager.
+correcthorsebattery,19,26,89.31,strong,False,2339,False,10001,Mix lowercase and uppercase letters.; Add digits (0-9).; Add symbols or punctuation characters.

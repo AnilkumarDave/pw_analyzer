@@ -1,0 +1,181 @@
+[
+  {
+    "password": "\ufeffP@ssw0rd123",
+    "length": 12,
+    "used_classes": [
+      "lower",
+      "upper",
+      "digits",
+      "symbols"
+    ],
+    "charset_size_estimate": 94,
+    "entropy_bits": 78.66,
+    "classification": "strong",
+    "heuristics": {
+      "is_all_lower": false,
+      "is_all_upper": false,
+      "is_all_digits": false,
+      "has_repeated_char": false,
+      "is_sequential_inc": false,
+      "looks_like_year": false
+    },
+    "dictionary_attack": {
+      "attempted": true,
+      "found": false,
+      "checks": 2339,
+      "match": ""
+    },
+    "brute_force_simulation": {
+      "attempted": true,
+      "found": false,
+      "attempts": 10001,
+      "match": ""
+    },
+    "recommendations": [
+      "No immediate actionable suggestions \u00e2\u20ac\u201d maintain unique passwords and use a password manager."
+    ]
+  },
+  {
+    "password": "password",
+    "length": 8,
+    "used_classes": [
+      "lower"
+    ],
+    "charset_size_estimate": 26,
+    "entropy_bits": 37.6,
+    "classification": "medium",
+    "heuristics": {
+      "is_all_lower": true,
+      "is_all_upper": false,
+      "is_all_digits": false,
+      "has_repeated_char": false,
+      "is_sequential_inc": false,
+      "looks_like_year": false
+    },
+    "dictionary_attack": {
+      "attempted": true,
+      "found": false,
+      "checks": 2339,
+      "match": ""
+    },
+    "brute_force_simulation": {
+      "attempted": true,
+      "found": false,
+      "attempts": 10001,
+      "match": ""
+    },
+    "recommendations": [
+      "Mix lowercase and uppercase letters.",
+      "Add digits (0-9).",
+      "Add symbols or punctuation characters."
+    ]
+  },
+  {
+    "password": "12345678",
+    "length": 8,
+    "used_classes": [
+      "digits"
+    ],
+    "charset_size_estimate": 10,
+    "entropy_bits": 26.58,
+    "classification": "weak",
+    "heuristics": {
+      "is_all_lower": false,
+      "is_all_upper": false,
+      "is_all_digits": true,
+      "has_repeated_char": false,
+      "is_sequential_inc": true,
+      "looks_like_year": false
+    },
+    "dictionary_attack": {
+      "attempted": true,
+      "found": true,
+      "checks": 320,
+      "match": "123456 (mangled: 12345678)"
+    },
+    "brute_force_simulation": {
+      "attempted": true,
+      "found": false,
+      "attempts": 10001,
+      "match": ""
+    },
+    "recommendations": [
+      "Increase length. Aim for 12+ characters.",
+      "Mix lowercase and uppercase letters.",
+      "Add symbols or punctuation characters.",
+      "Avoid using only digits (e.g., phone numbers or years).",
+      "This password is present or easily derived from common words \u00e2\u20ac\u201d choose a unique passphrase or add complexity."
+    ]
+  },
+  {
+    "password": "Qwerty!1",
+    "length": 8,
+    "used_classes": [
+      "lower",
+      "upper",
+      "digits",
+      "symbols"
+    ],
+    "charset_size_estimate": 94,
+    "entropy_bits": 52.44,
+    "classification": "strong",
+    "heuristics": {
+      "is_all_lower": false,
+      "is_all_upper": false,
+      "is_all_digits": false,
+      "has_repeated_char": false,
+      "is_sequential_inc": false,
+      "looks_like_year": false
+    },
+    "dictionary_attack": {
+      "attempted": true,
+      "found": false,
+      "checks": 2339,
+      "match": ""
+    },
+    "brute_force_simulation": {
+      "attempted": true,
+      "found": false,
+      "attempts": 10001,
+      "match": ""
+    },
+    "recommendations": [
+      "No immediate actionable suggestions \u00e2\u20ac\u201d maintain unique passwords and use a password manager."
+    ]
+  },
+  {
+    "password": "correcthorsebattery",
+    "length": 19,
+    "used_classes": [
+      "lower"
+    ],
+    "charset_size_estimate": 26,
+    "entropy_bits": 89.31,
+    "classification": "strong",
+    "heuristics": {
+      "is_all_lower": true,
+      "is_all_upper": false,
+      "is_all_digits": false,
+      "has_repeated_char": true,
+      "is_sequential_inc": false,
+      "looks_like_year": false
+    },
+    "dictionary_attack": {
+      "attempted": true,
+      "found": false,
+      "checks": 2339,
+      "match": ""
+    },
+    "brute_force_simulation": {
+      "attempted": true,
+      "found": false,
+      "attempts": 10001,
+      "match": ""
+    },
+    "recommendations": [
+      "Mix lowercase and uppercase letters.",
+      "Add digits (0-9).",
+      "Add symbols or punctuation characters."
+    ]
+  }
+]
