@@ -2,8 +2,7 @@
 
 📅 **Project Duration:** 5 October 2022 – 20 October 2022 (≈ 15 days, Part-Time)  
 Academic Year: First Term (MSc Information Security & Digital Forensics)  
-Institution: University of East London, London, UK  
-Mentor: Professor Abdulrazaq Abba  
+Institution: University of East London, London, UK    
 Subject: Computer Security
 
 ---
