@@ -8,30 +8,33 @@ Subject: Computer Security
 ---
 
 ## 🏫 Project Overview
-This project was built as an **extra-curricular academic project** during my MSc.  
+This project was created as part of my MSc in Information Security and Digital Forensics
+and later refined as a portfolio project.
 
-It is a **Python-based password strength analyzer and breach simulation tool** that evaluates password complexity, simulates dictionary attacks and limited brute-force attacks, and produces structured reports.
+It is a Python-based tool that helps users understand the strength of passwords and
+whether they may have appeared in known or simulated data breaches.
 
 **Key features:**  
 
-- Password strength classification (Weak / Medium / Strong)  
-- Entropy estimation (bits)  
-- Dictionary attack simulation with optional mangling  
-- Limited brute-force attack simulation  
-- Human-friendly summary with actionable recommendations  
-- Save analysis reports in **JSON** and **CSV** formats  
-- Optional GUI using PyQt6 for interactive analysis  
+- A command-line interface (CLI) for quick checks
+- A simple GUI (for example using PyQt6) for interactive use
+- Password strength analysis based on length, character sets and common patterns
+- Checks against a local list of breached passwords (or hash prefixes), simulating
+  real-world breach lookups
+- CSV/JSON export of results for further review
+
+The core logic is written in **Python**, with a focus on clear, testable functions.
 
 In October 2025, the project was modernised for Python 3.13 with improved report structure and optional GUI.
 
 ---
 
 ## 🎯 Project Objectives
-- Evaluate and classify password strength using entropy and heuristic rules  
-- Simulate dictionary attacks and mangling techniques to detect weak passwords  
-- Perform limited brute-force simulations with configurable parameters  
-- Generate human-readable and machine-friendly reports  
-- Provide recommendations to improve password security  
+- Demonstrate secure handling of passwords in a learning environment (no plain-text
+  storage of real user passwords)
+- Show how to structure a small security tool with both CLI and GUI entry points
+- Provide simple reports that can be used for awareness and training
+- Practise automated testing of security-related logic 
 
 ---
 
@@ -40,47 +43,97 @@ In October 2025, the project was modernised for Python 3.13 with improved report
 |-----------------|---------------------|
 | Oct 2022        | Oct 2025            |
 
-**Modern updates include:**  
-✅ Updated Python code to Python 3.13  
-✅ Enhanced dictionary attack mangling  
-✅ Limited brute-force simulation with configurable attempts and max seconds  
-✅ Added human-friendly verdicts to JSON/CSV reports  
-✅ Cleaned folder structure and project documentation  
-✅ Optional PyQt6 GUI for interactive analysis  
+🛠️ Core Technologies
 
----
+- Python 3  
+- Standard library modules for hashing and file handling  
+- Optional GUI built with PyQt6 or similar toolkit  
+- CSV and/or JSON output for reporting  
+- Automated tests written in **pytest** with **Allure** reports for visibility  
 
-## 🧩 System Features
+📂 Project Structure (typical)
 
-### 👨‍💻 CLI Version
-- Analyze single or batch passwords  
-- Produce JSON and CSV reports  
-- Configure dictionary, brute-force charset, max attempts, and max length  
+- `pw_analyzer.py` – core password analysis functions and CLI entry point  
+- `gui_app.py` (optional) – simple GUI wrapper using PyQt6 or similar  
+- `data/breached_passwords.txt` – simulated breached password list  
+- `reports/` – CSV/JSON reports created by the tool  
+- `tests/` – automated tests for core functions (pytest + Allure)  
+- `README.md` – project documentation (this file)  
 
-### 🧑‍💻 GUI Version (Optional)
-- Interactive password analysis  
-- Display human-friendly summary with color-coded verdict  
-- Load dictionary file for attacks  
-- Save reports including human verdict  
+🔍 What the Analyzer Does (Examples)
 
----
+The exact implementation can vary, but typical checks include:
 
-## 📂 Sample Data
-| Category           | Examples / Notes |
-|-------------------|-----------------|
-| Passwords          | `P@ssw0rd123`, `123456`, `password` |
-| Dictionary file    | `common.txt` (user-provided) |
-| Reports            | JSON / CSV with human-friendly verdict |
+- **Strength analysis**
+  - Minimum length checks
+  - Presence of upper/lowercase letters, digits and symbols
+  - Detection of common patterns (simple sequences, repeated characters, dictionary words)
+- **Breach simulation**
+  - Hashing the password and checking against a local breach list, or
+  - Comparing against a file of known weak/breached passwords
 
----
+The tool then produces a simple structured result such as:
 
-## 💻 Project Files
-| File                  | Description |
-|----------------------|-------------|
-| `pw_analyzer.py`      | Core Python module for password analysis |
-| `gui.py`              | Optional PyQt6 GUI |
-| `examples/`           | Sample password lists and dictionary files |
-| `README.md`           | Project documentation |
+- `score` – numeric strength score  
+- `strength_label` – e.g. "Weak", "Medium", "Strong"  
+- `breached` – boolean indicating whether it appears in the breach list  
+- `reasons` – list of messages explaining the result  
+
+## ▶️ Usage (Example)
+
+Command-line usage (example, to be aligned with the actual script):
+
+```bash
+python pw_analyzer.py --password "ExamplePassword123!" --output reports/result.json
+```
+
+or to run in interactive/GUI mode:
+
+```bash
+python gui_app.py
+```
+
+The CLI can also be extended to read passwords from a file and write multiple results
+to CSV or JSON.
+
+## 🧪 Automated Testing & Allure Reports
+
+The `tests/` folder contains automated tests for the core password analysis logic,
+using **pytest** and **allure-pytest**.
+
+These tests:
+
+- Verify that very weak passwords are flagged correctly  
+- Check that strong passwords reach the expected score/label range  
+- Confirm that known breached passwords are marked as `breached=True`  
+- Provide a safety net when refactoring or extending the tool
+
+To run the tests locally (from the project root after installing test dependencies):
+
+```bash
+pip install -r requirements-tests.txt
+pytest --alluredir=allure-results
+```
+
+To generate and view an Allure HTML report:
+
+```bash
+allure serve allure-results
+```
+
+This produces a visual test report showing which cases passed/failed and gives a
+clear picture of coverage for interview or review purposes.
+
+## 🧵 CI Integration (Optional)
+
+A simple CI pipeline (for example in Jenkins or GitHub Actions) can:
+
+1. Check out the repository  
+2. Install dependencies (including test dependencies)  
+3. Run `pytest --alluredir=allure-results`  
+4. Archive the Allure results or publish an HTML report  
+
+This demonstrates how even a small security tool can benefit from CI and automated testing.
 
 ---
 
@@ -149,7 +202,7 @@ python gui.py
 
 📜 Disclaimer
 
-This project was built as an extra-curricular MSc project. It is intended for educational, research, and password security awareness purposes only. Not intended for malicious use.
+This project is intended for educational and demonstration purposes only. It should not be used as a sole basis for password security decisions or as a substitute for organisational security policies and guidance.
 
 ✨ Author
 
